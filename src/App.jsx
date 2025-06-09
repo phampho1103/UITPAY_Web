@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
 import ProductManagement from './components/ProductManagement';
 import CustomerManagement from './components/CustomerManagement';
+import ShopManagement from './components/ShopManagement';
+import BannerManagement from './components/BannerManagement';
+import PostManagement from './components/PostManagement';
 
 function App() {
   return (
@@ -17,6 +20,15 @@ function App() {
           <Button color="inherit" component={Link} to="/customers">
             Quản lý người mua
           </Button>
+          <Button color="inherit" component={Link} to="/shops">
+            Quản lý Shop
+          </Button>
+          <Button color="inherit" component={Link} to="/banners">
+            Quản lý Banner
+          </Button>
+          <Button color="inherit" component={Link} to="/posts">
+            Quản lý Bài viết
+          </Button>
         </Toolbar>
       </AppBar>
 
@@ -25,6 +37,9 @@ function App() {
         <Routes>
           <Route path="/products" element={<ProductManagement />} />
           <Route path="/customers" element={<CustomerManagement />} />
+          <Route path="/shops" element={<ShopManagement />} />
+          <Route path="/banners" element={<BannerManagement />} />
+          <Route path="/posts" element={<PostManagement />} />
         </Routes>
       </Container>
     </Router>
